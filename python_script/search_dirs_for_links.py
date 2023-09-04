@@ -72,11 +72,11 @@ if last_downloaded_date:
         month = 1
 else:
     print(">>>Starting the download process from scratch.")
-    for year in range(2010, int(datetime.today().year) + 1):
-        for month in range(1, 13):
-            for day in range(1, calendar.monthrange(year, month)[1] + 1):
-                print(f"\n\n----------------------\nNow downloading: {year} / {month} / {day}\n----------------------")
-                create_dir_n_download_fits(create_url(year, month, day), create_full_path(year, month, day))
+    for y in range(2010, int(datetime.today().year) + 1):
+        for m in range(1, 13):
+            for d in range(1, calendar.monthrange(y, m)[1] + 1):
+                print(f"\n\n----------------------\nNow downloading: {y} / {m} / {d}\n----------------------")
+                create_dir_n_download_fits(create_url(y, m, d), create_full_path(y, m, d))
                 print(">>>Done")
 
 
